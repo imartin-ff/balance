@@ -848,6 +848,7 @@ button, input, select {
     align-items: flex-start;
     border-radius: 5px;
     padding: 15px 25px;
+    padding-top: 35px;
   }
   .contact-form__inner .form-fields .input-white {
     padding-left: 10px;
