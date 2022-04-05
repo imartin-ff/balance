@@ -1,10 +1,17 @@
 
-
-
-
-
-
-
+const popupBtns = document.querySelectorAll('.popup-link');
+if(popupBtns){
+    popupBtns.forEach((link) => {
+        link.addEventListener('click', function(e){
+          e.preventDefault();
+          document.querySelector('.popup-wrapper').classList.add('open');
+        })
+    })
+    document.querySelector('.popup-close').addEventListener('click', function(){
+      document.querySelector('.popup-wrapper').classList.remove('open');
+    })
+    
+}
 
 
 const gallerySliderContainer = document.querySelector('.gallery-slider');
@@ -47,14 +54,6 @@ if(gallerySliderContainer){
 
 
 
-
-
-
-
-
-
-
-
 const bgSliderContainer = document.querySelector('.bg-slider');
 if(bgSliderContainer){
   const bgSwiper = new Swiper(bgSliderContainer, {
@@ -75,3 +74,7 @@ if(bgSliderContainer){
 
   });
 }
+
+
+
+
