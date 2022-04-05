@@ -1,5 +1,15 @@
 
-const swiper = new Swiper('.gallery-slider', {
+
+
+
+
+
+
+
+
+const gallerySliderContainer = document.querySelector('.gallery-slider');
+if(gallerySliderContainer){
+  const gallerySwiper = new Swiper(gallerySliderContainer, {
     // Default parameters
     slidesPerView: 2,
     enteredSlides: true,
@@ -9,6 +19,9 @@ const swiper = new Swiper('.gallery-slider', {
     wrapperClass: 'gallery-slider-wrapper',
     slideClass: 'gallery-slider-slide',
     allowTouchMove: false,
+    autoplay: {
+      delay: 5000,
+    },
     nextButton: '.next-slide',
     prevButton: '.prev-slide',
     navigation: {
@@ -29,3 +42,36 @@ const swiper = new Swiper('.gallery-slider', {
       }
     }
   })
+
+}
+
+
+
+
+
+
+
+
+
+
+
+const bgSliderContainer = document.querySelector('.bg-slider');
+if(bgSliderContainer){
+  const bgSwiper = new Swiper(bgSliderContainer, {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 40,
+    loop: true,
+    wrapperClass: 'bg-slider-wrapper',
+    slideClass: 'bg-slide',
+    autoplay: {
+      delay: 5000,
+    },
+
+    effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+    },
+
+  });
+}
